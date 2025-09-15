@@ -10,11 +10,13 @@
 
 ### Front (autou-front)
 
-``
+```
 cd autou-front
+
 npm install
+
 npm run dev
-``
+```
 
 
 
