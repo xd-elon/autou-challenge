@@ -39,6 +39,9 @@ GlobalWorkerOptions.workerSrc = new URL(
   import.meta.url
 ).toString();
 
+
+const API_URL = import.meta.env.VITE_BACKEND_URL;
+
 function App() {
   const [emailContent, setEmailContent] = useState("");
   const [classification, setClassification] = useState<null | string>(null);
@@ -49,7 +52,7 @@ function App() {
   const handleProcess = async () => {
     if (!emailContent.trim()) return;
 
-    const res = await fetch("http://localhost:5000/classify", {
+    const res = await fetch(`${API_URL}/classify`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -69,7 +72,7 @@ function App() {
   const handleGenerateAlternative = async () => {
     if (!emailContent.trim()) return;
 
-    const res = await fetch("http://localhost:5000/reply", {
+    const res = await fetch(`${API_URL}/reply`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
