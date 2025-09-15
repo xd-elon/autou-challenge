@@ -83,7 +83,14 @@ export const Container = styled.div`
   background: #fafafa;
   min-height: 100vh;
   font-family: Inter, sans-serif;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
 `;
+
 
 export const Card = styled.div`
   flex: 1;
@@ -91,6 +98,10 @@ export const Card = styled.div`
   border-radius: 16px;
   padding: 2rem;
   box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
 `;
 
 export const SectionTitle = styled.h2`
@@ -122,6 +133,10 @@ export const BrowseButton = styled.button`
   color: #fff;
   cursor: pointer;
   width: 50%;
+
+  @media (max-width: 480px) {
+    width: 100%;
+  }
 `;
 
 export const Separator = styled.div`
@@ -187,6 +202,10 @@ export const ResponseBox = styled.div`
 export const ButtonRow = styled.div`
   display: flex;
   gap: 1rem;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 export const CopyButton = styled.button`
