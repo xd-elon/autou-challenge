@@ -4,7 +4,6 @@ import React, { useState, useRef } from "react";
 import {
   getDocument,
   GlobalWorkerOptions,
-  version as pdfjsVersion,
 } from "pdfjs-dist";
 
 import { MdEmail } from "react-icons/md"; 
@@ -32,9 +31,7 @@ import {
   HeaderCircle, 
   LogoSquare,
   Subtitle, 
-  Title,
-  GradientIcon
-} from "./App.style";
+  Title} from "./App.style";
 
 // lib anterior tava com bug, lembrete pra min mesmo, Configura o worker de forma compatível com Vite + TS
 GlobalWorkerOptions.workerSrc = new URL(
