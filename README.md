@@ -33,3 +33,7 @@ flask run --port=5000
 ```
 
 vejo o env example deixei a key necessesaria la, existe example de pdf e txt na raiz.
+
+ATENÇÃO!: a detecção de chaves pode bloquear ou desativar a chave do groq por ter sido esposta publicamente caso seja necessario gere sua propria chave aqui: 
+
+Link: https://console.groq.com/keys
